@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import Home from "./Home.jsx";
 import Login from "./Login.jsx";
 import NotFound from "./NotFound.jsx";
@@ -13,22 +13,24 @@ import {
 import Logout from "./Logout.jsx";
 import Register from "./Register.jsx";
 import Form from "./Form.jsx";
+import {UserProvider} from "../providers/UserProvider.jsx";
 
 function App() {
 
-  return (
-    <HashRouter>
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='oddaj-rzeczy' element={<Form />} />
-            <Route path='logowanie' element={<Login />} />
-            <Route path='rejestracja' element={<Register />} />
-            <Route path='wylogowano' element={<Logout />} />
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-    </HashRouter>
-
-  )
+    return (
+        <UserProvider>
+            <HashRouter>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='oddaj-rzeczy' element={<Form/>}/>
+                    <Route path='logowanie' element={<Login/>}/>
+                    <Route path='rejestracja' element={<Register/>}/>
+                    <Route path='wylogowano' element={<Logout/>}/>
+                    <Route path="*" element={<NotFound/>}/>
+                </Routes>
+            </HashRouter>
+        </UserProvider>
+    )
 }
 
 export default App

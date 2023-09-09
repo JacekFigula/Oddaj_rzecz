@@ -18,7 +18,8 @@ function Logout() {
         <section className="logout__wrapper">
         <h1 style={{textAlign: "center"}}>Wylogowanie nastąpiło <br/> pomyślnie!</h1>
         <MyDecoration/>
-        <Link to="/">Strona główna</Link>
+
+        <Link className="logout__btn btn" to="/">Strona główna</Link>
 
     </section>
     </>)

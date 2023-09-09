@@ -5,9 +5,9 @@ function Header() {
     return (<>
         <section className="header__wrapper">
         <div className="header__topWrapper">
-            <Link to="/logowanie">Zaloguj</Link>
-            <Link to="/rejestracja">Załóż konto</Link>
-            <Link to="/wylogowano">Wyloguj</Link>
+            <Link className="btn"  to="/logowanie">Zaloguj</Link>
+            <Link className="btn"  to="/rejestracja">Załóż konto</Link>
+            <Link className="btn"  to="/wylogowano">Wyloguj</Link>
         </div>
         <div className="header__btmWrapper">
             <Link to="/">Start</Link>
