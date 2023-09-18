@@ -4,6 +4,8 @@
 @import './settings/colors';
 @import './logout.scss';
 @import './header.scss';
+@import './hero.scss';
+@import './foundations.scss';
 
 
 body {
@@ -17,6 +19,7 @@ color: $color-darkgrey;
   position: absolute;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 a {
@@ -32,4 +35,7 @@ a {
     color: black;
     background-color: $color-yellow;
   }
+}
+.in_work {
+  border: 1px solid red;
 }

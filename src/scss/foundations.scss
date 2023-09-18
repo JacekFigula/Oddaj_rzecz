@@ -1,0 +1,60 @@
+.found{
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1344px;
+    max-height: 862px;
+
+  }
+  &__options{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__desc{
+    font-weight: normal;
+    text-decoration: none;
+    margin: 70px 0;
+    text-align: center;
+    max-width: 640px;
+
+  }
+  &__foundations{
+    width: 100%;
+  }
+  &__foundation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //height: 81px;
+    border-bottom: 1px solid $color-darkgrey;
+  }
+  &__name{
+    font-size: 26px;
+
+  }
+  &__mission{
+    font-size: 18px;
+  }
+  &__items{
+    font-size: 18px;
+    font-weight: lighter;
+  }
+&__btns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 835px;
+}
+  &__btn{
+width: 200px;
+    height: 100%;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+
+  }
+}

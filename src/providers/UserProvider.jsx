@@ -1,6 +1,6 @@
 import {createContext, useContext, useEffect, useState} from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import {app} from "../firebase.jsx";
+import {auth} from "../firebase.jsx";
 
 
 const UserContext = createContext(null)
@@ -10,7 +10,6 @@ const [user, setUser] = useState(null);
 
 
 useEffect(()=>{
-    const auth = getAuth(app);
     onAuthStateChanged(auth, (user) => {
         if (user) {
             setUser(user)

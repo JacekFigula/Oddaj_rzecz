@@ -1,8 +1,7 @@
-import {Link,} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {useState} from "react";
 import Header from "./Header.jsx";
-import {app} from "../firebase.jsx"
-import {useNavigate} from "react-router-dom";
+import {auth} from "../firebase.jsx"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 function Register() {
@@ -18,10 +17,8 @@ const handleChange = ({target: { name, value}}) =>{
     }));
 }
 const handleAdd = ()=>{
-    const auth = getAuth(app);
     const {email,password} = values;
-    createUserWithEmailAndPassword(auth, email, password)
-        .then(()=>{
+    createUserWithEmailAndPassword(auth, email, password).then(()=>{
             navigate("/");
         })
         .catch((error)=>{

@@ -1,0 +1,42 @@
+.hero{
+  &__wrapper{
+    display: flex;
+   gap:66px;
+
+  }
+  &__bg{
+    width: 885px;
+    height: 963px;
+    background-image: url("src/assets/Home-Hero-Image.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -175px;
+  }
+  &__opening{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 210px;
+    gap:25px;
+
+  }
+  &__hdl{
+    text-align: center;
+    font-size: 38px;
+  }
+  &__btns{
+    margin-top: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    >a{
+      font-size: 36px;
+      text-align: center;
+      border: 1px solid $color-grey;
+      flex-shrink: 1;
+      flex-basis: 50%;
+    }
+  }
+}
